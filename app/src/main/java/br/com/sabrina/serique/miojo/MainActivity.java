@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvTempMin;
     private Button btCalc;
     public int tempo, ampl1, ampl2;
+    public AlertDialog alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +39,19 @@ public class MainActivity extends AppCompatActivity {
 
                 if(mdc(ampl1,ampl2) != 1 || ampl1 <= tempo || ampl2 <= tempo){
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext())
-                            .setTitle("Alerta")
-                            .setMessage("Não é possivel calcular com essas ampulhetas!")
-                            .setCancelable(false)
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                }
-                            });
-
-                    AlertDialog alert = builder.create();
-                    alert.show();
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext())
+//                            .setTitle("Alerta")
+//                            .setMessage("Não é possivel calcular com essas ampulhetas!")
+//                            .setCancelable(false)
+//                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                                }
+//                            });
+//
+//                    alert = builder.create();
+//                    alert.show();
                 }else{
                     tvTempMin.setText(String.valueOf(tempoMimino(tempo, ampl1, ampl2)));
                 }
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     private int mdc(int a, int b){
 
-        int c;
-        while (a%b != 0){
+        int c = a%b;
+        while (c != 0){
 
             c = a%b;
             a = b;
