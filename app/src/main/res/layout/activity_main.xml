@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="@string/ed_numero"/>
+            android:hint="@string/ed_numero"/>
 
         <TextView
             android:id="@+id/tv_ampl1"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="@string/ed_numero"/>
+            android:hint="@string/ed_numero"/>
 
         <TextView
             android:id="@+id/tv_ampl2"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="@string/ed_numero"/>
+            android:hint="@string/ed_numero"/>
 
         <Button
             android:id="@+id/bt_calc"
