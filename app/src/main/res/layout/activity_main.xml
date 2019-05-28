@@ -15,7 +15,7 @@
         android:padding="40dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_miojo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tv_miojo"
@@ -23,7 +23,7 @@
             android:textColor="@android:color/background_dark" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/ed_miojo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -31,7 +31,7 @@
             android:text="@string/ed_numero"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_ampl1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -40,7 +40,7 @@
             android:textColor="@android:color/background_dark" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/ed_ampl1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,7 +48,7 @@
             android:text="@string/ed_numero"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_ampl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
             android:textColor="@android:color/background_dark" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/ed_ampl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -65,7 +65,7 @@
             android:text="@string/ed_numero"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bt_calc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -75,7 +75,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tv_tempo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -84,7 +84,7 @@
             android:textColor="@android:color/background_dark" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tv_tempo_min"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
