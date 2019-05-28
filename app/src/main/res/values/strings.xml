@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Miojo</string>
+    <string name="tv_miojo">Tempo do Miojo</string>
+    <string name="ed_numero">Digite os minutos</string>
+    <string name="tv_ampl1">Ampulheta 1</string>
+    <string name="tv_ampl2">Ampulheta 2</string>
+    <string name="tv_preparo">Tempo mínimo</string>
+    <string name="bt_calc">Calcular</string>
 </resources>
