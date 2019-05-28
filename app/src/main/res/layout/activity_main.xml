@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:text="@string/tv_miojo"
             android:textAlignment="center"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/ed_miojo"
@@ -28,7 +29,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:hint="@string/ed_numero"/>
+            android:hint="@string/ed_numero"
+            android:textAlignment="center"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/tv_ampl1"
@@ -37,15 +40,31 @@
             android:layout_marginTop="20dp"
             android:text="@string/tv_ampl1"
             android:textAlignment="center"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/ed_ampl1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="@string/ed_numero"/>
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_hourglass_empty_black_24dp"
+                android:contentDescription="@string/tv_ampl1"/>
+
+            <EditText
+                android:id="@+id/ed_ampl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ed_numero"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_ampl2"
@@ -54,15 +73,31 @@
             android:layout_marginTop="20dp"
             android:text="@string/tv_ampl2"
             android:textAlignment="center"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/ed_ampl2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="@string/ed_numero"/>
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/tv_ampl2"
+                app:srcCompat="@drawable/ic_hourglass_empty_blue_24dp" />
+
+            <EditText
+                android:id="@+id/ed_ampl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ed_numero"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/bt_calc"
@@ -81,14 +116,18 @@
             android:layout_marginTop="25dp"
             android:text="@string/tv_preparo"
             android:textAlignment="center"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_tempo_min"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/coloGrayTrans"
             android:text=""
-            android:textColor="@android:color/background_dark" />
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
 
     </LinearLayout>
 </LinearLayout>

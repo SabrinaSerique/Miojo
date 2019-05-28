@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText edTempo, edAmp1, edAmp2;
     private TextView tvTempMin;
     private Button btCalc;
-    public int tempo, ampl1, ampl2;
+    public int tempo, ampl1, ampl2, restr;
     public AlertDialog alert;
 
     @Override
@@ -37,21 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 ampl1 = Integer.parseInt(edAmp1.getText().toString());
                 ampl2 = Integer.parseInt(edAmp2.getText().toString());
 
-                if(mdc(ampl1,ampl2) != 1 || ampl1 <= tempo || ampl2 <= tempo){
+                restr = tempo%mdc(ampl1,ampl2);
 
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext())
-//                            .setTitle("Alerta")
-//                            .setMessage("Não é possivel calcular com essas ampulhetas!")
-//                            .setCancelable(false)
-//                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                                }
-//                            });
-//
-//                    alert = builder.create();
-//                    alert.show();
+                if(restr != 0 ||ampl1 == ampl2 || ampl1 <= tempo || ampl2 <= tempo){
+                    Toast.makeText(MainActivity.this, "Não é possivel calcular usando essas ampulhetas.", Toast.LENGTH_LONG).show();
                 }else{
                     tvTempMin.setText(String.valueOf(tempoMimino(tempo, ampl1, ampl2)));
                 }
