@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
                     alert.show();
                 }else{
-                    tvTempMin.setText(tempoMimino(tempo, ampl1, ampl2));
+                    tvTempMin.setText(String.valueOf(tempoMimino(tempo, ampl1, ampl2)));
                 }
 
             }
@@ -78,15 +78,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private int calculoTempoMinimo(int t, int a, int b, int aOrig, int bOrig){
+    private int calculoTempoMinimo(int t, int x, int y, int aOrig, int bOrig){
         int c, cOrig, dif, maxt;
+        int a = x;
+        int b = y;
 
         if(a > b){
-            c = b;
+            c = a;
             a = b;
             b = c;
 
-            cOrig = bOrig;
+            cOrig = aOrig;
             aOrig = bOrig;
             bOrig = cOrig;
 
